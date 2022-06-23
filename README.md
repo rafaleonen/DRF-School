@@ -1,0 +1,23 @@
+# Approaches
+  - Docker and Docker Compose
+  - Django Framework
+  - Django Rest Framework
+  - Serializer concepts
+  - Default and Custom Routes
+  - Relation N-N
+  - CRUD using ModelViewSet
+  - CRUD using Rest Freamework generics
+  - Basic Authentication
+  - Query parameter versioning
+  - User Permissions
+  - DRF Default Settings
+  - Requests limit (THROTTLE)
+  - ViewSet methods and models
+  - CORS Setting using django-cors-headers
+  - Upload files using Pillow
+  - Postgres DB using docker container and pyscopg2
+  - Caching using Redis
+  - Translations (i18n)
+  - Content Negotiation (XML/JSON Responses)
+  - Honeypot to detect requests in app admin
+  - Tests

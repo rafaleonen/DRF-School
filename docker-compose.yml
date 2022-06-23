@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: school_web
+    image: school_api_v1
+    volumes:
+      - .:/usr/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - cache
+
+  db:
+    container_name: school_db
+    image: postgres:14
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=121212
+      - POSTGRES_DB=school
+    volumes:
+      - pgdata:/data/postgres
+
+  cache:
+    container_name: school_cache
+    image: redis:7
+    ports:
+      - 6379:6379
+    volumes:
+      - redisdata:/data
+
+volumes:
+  pgdata:
+  redisdata:
